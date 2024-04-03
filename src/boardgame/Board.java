@@ -1,4 +1,4 @@
-package boardgame;
+ package boardgame;
 
 public class Board {
 	private int rows;
@@ -34,7 +34,7 @@ public class Board {
 			throw new BoardException("Position not on the board");
 		}
 		return pieces[position.getRow()][position.getColumn()];
-	}
+ 	}
 
 	public void placePiece(Piece piece, Position position) {
 		if (thereIsAPice(position)) {
