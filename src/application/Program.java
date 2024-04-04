@@ -33,6 +33,7 @@ public class Program {
 			}
 			catch(InputMismatchException e){
 				System.out.println(e.getMessage());
+				System.out.println("Press any key to continue.");
 				sc.nextLine();
 			}
 		}
