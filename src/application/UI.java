@@ -55,6 +55,10 @@ public class UI {
 		System.out.println();
 		printCapturedPieces(captured);
 		System.out.println("\nTurn: " + cm.getTurn() + "\nWaiting player: " + cm.getCurrentPlayer());
+		
+		if(cm.getCheck()) {
+			System.out.println("CHECK!");
+		}
 	}
 
 	public static void printBoard(ChessPiece[][] pieces) {
@@ -99,8 +103,8 @@ public class UI {
 	}
 	
 	private static void printCapturedPieces(List<ChessPiece> captured) {
-		List<ChessPiece> white = captured.stream().filter(x -> x.getColor() == Color.WHITE).collect(Collectors.toList());
-		List<ChessPiece> black = captured.stream().filter(x -> x.getColor() == Color.BLACK).collect(Collectors.toList());
+		List<ChessPiece> white = captured.stream().filter(x -> x != null && x.getColor() == Color.WHITE).collect(Collectors.toList());
+		List<ChessPiece> black = captured.stream().filter(x -> x != null && x.getColor() == Color.BLACK).collect(Collectors.toList());
 		
 		System.out.println("Captured pieces: ");
 		System.out.print("WHITE: ");
