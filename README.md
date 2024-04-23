@@ -1,4 +1,5 @@
-**# Chess Game**
+# **Chess Game**
+
 This projetct is a chess game implemented in Java to be played in the terminal. The project utilizes object-oriented programming (OOP) principles and a layered development approach to ensure modularity and maintainability.
 
 **## Requirements**
